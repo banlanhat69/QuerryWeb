@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Web</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div class="header">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="input1" class="label-search">Text Query:</label>
+                <input type="text" id="text_search" name="input1" class="input-search input-text-search">
+                <button class="button-search button-text-search" name="text_search"><img class="img-search" src="static/image/search_img.png"></button>
+            </div>
+            <div class="form-group">
+                <label for="input2" class="label-search">ID Query:</label>
+                <input type="text" id="id_search" name="input2" class="input-search input-id-search">
+                <button class="button-search button-id-search" name="id_search"><img class="img-search" src="static/image/search_img.png"></button>
+            </div>
+            <div class="form-group">
+                <label for="input3" class="label-search">Neighbor:</label>
+                <input type="text" id="neighbor" name="input3" class="input-search input-neighbor-search">
+                <button class="button-search button-neighbor-search" name="neighbor_search"><img class="img-search" src="static/image/search_img.png"></button>
+            </div>
+            <div class="form-group">
+                <label for="input4" class="label-search">OCR Search:</label>
+                <input type="text" id="ocr" name="input4" class="input-search input-ocr-search">
+                <button class="button-search button-ocr-search" name="ocr_search"><img class="img-search" src="static/image/search_img.png"></button>
+            </div>
+            <br>
+            <div class="form-group save-csv">
+                <label for="input5" class="label-search">CSV Name:</label>
+                <input type="text" id="csv" name="save_csv"> <input type="submit" value="Save" class="submit-save">
+            </div>
+        </div>
+        <p class="searching-information">Searching: <span class="query-information"></span> </p>
+        <div id="status"></div>
+    </div>
+    <div class="images-result"></div>
+    <div class="status-box" id="status" draggable="false"></div>
+    <script src="../static/script/generate_image.js"></script>
+</body>
+</html>
